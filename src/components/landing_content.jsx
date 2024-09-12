@@ -1,13 +1,34 @@
-import './landing_content.css'
+import "./landing_content.css";
 
 const landing_content = () => {
   return (
-    <div className='landing-content'>
-      <h2>EDUARD <span>ORTEGÓN</span> </h2>
-      <h1>SOFTWARE DEVELOPER</h1>
-      <div className='arrow-container'><img src="../src/assets/arrow.png" alt="" /></div>
-    </div>
-  )
-}
+    <div className="landing-content">
+      <section className="landing-section">
+        <div className="tag_container">
+          <p>Disponible para trabajar</p>
+        </div>
 
-export default landing_content
+        <h1 className="landing-h1">Hola, soy Eduard Ortegón </h1>
+        <h2 className="landing-h2">
+          <span>
+            Desarrollador de software, soporte técnico e Ingeniero Electrónico{" "}
+          </span>{" "}
+          de Bogotá, Colombia.
+        </h2>
+        <h2 className="landing-h2">
+          Estudiante de Maestria en Inteligencia Artificial, especialista en Python.
+        </h2>
+        <div className="landing-button-container">
+          <button className="landing-button" id="first-button">
+            Contáctame
+          </button>
+          <button className="landing-button" id="second-button">
+            LinkedIn
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default landing_content;
