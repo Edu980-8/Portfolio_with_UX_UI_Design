@@ -1,0 +1,34 @@
+.landing-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 3rem) ;
+    width: 100%;
+    text-align: center;
+    background-image: url("../src/assets/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(244, 222, 179, 0.7); 
+    background-blend-mode: overlay; 
+}
+
+
+.landing-content h2, .landing-content h1{
+    margin: 0;
+    padding: 0;
+    background-color: var(--navcolor);
+    width: 25rem;
+}
+.landing-content h2{
+    margin: 0.5rem;
+}
+.arrow-container{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    bottom: 1rem;
+}
+.arrow-container:hover{
+    cursor: pointer;
+}

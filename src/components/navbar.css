@@ -1,0 +1,37 @@
+nav{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    color: white;
+    height: 5.5rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+ul{
+    height: 3.5rem;
+    width: 39rem;
+    border-radius: 2.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+    border: 1px solid #5A5A5A;
+}
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: 0.3s ease;
+    
+}
+li:hover{
+    color: var(--hover-color);
+    cursor: pointer;
+}
+.point{
+    height: 0.25rem;
+    width: 0.25rem;
+    border-radius: 50%;
+    background-color: #5A5A5A ;
+}

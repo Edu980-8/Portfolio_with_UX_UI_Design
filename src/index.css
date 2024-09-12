@@ -1,0 +1,17 @@
+:root{
+  --navcolor:#4793AF;
+  --hover-color:#D4B98A;
+  --back-color:#F4DEB3;
+  font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--back-color);
+  color: white;
+}
