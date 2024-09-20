@@ -53,7 +53,7 @@ const Experience = () => {
       <div className="flex flex-col items-center w-[65.875rem]">
         <div className="flex text-left w-full gap-[1.5rem] mb-[3rem]">
           <h2 className="text-white text-[2.5rem]">Experiencia Laboral</h2>
-          <div className="self-center w-[65%] h-[0.125rem] bg-white my-4 bg-custom-gray"></div>
+          <div className="self-center w-[65%] h-[0.125rem]  my-4 bg-custom-gray"></div>
         </div>
 
         <div className="flex flex-row h-auto">

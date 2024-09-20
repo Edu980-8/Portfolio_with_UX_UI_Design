@@ -8,6 +8,7 @@ const Projects = ({
   techs,
   code_link,
   preview_link,
+  index,
 }) => {
   return (
     <div className="w-full flex gap-[3rem] items-center ">
