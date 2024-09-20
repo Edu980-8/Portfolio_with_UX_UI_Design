@@ -13,6 +13,7 @@ const ToggleButton = () => {
       onClick={toggleSwitch}
     >
       <div className="toggle-knob"></div>
+      {!isOn ? <img src="../../src/assets/sun.png" alt="" /> : <img className="moon" src="../../src/assets/moon.png" alt="" />}
     </div>
   );
 };
