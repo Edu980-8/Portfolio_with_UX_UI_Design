@@ -24,7 +24,9 @@ const LandingContent = () => {
           <span>
             <span
               className={`${
-                isAnimationActive ? "span-animation landing-span-animation text-white" : ""
+                isAnimationActive
+                  ? "span-animation landing-span-animation text-white"
+                  : ""
               }`}
             >
               Desarrollador de software,
@@ -33,13 +35,14 @@ const LandingContent = () => {
           </span>
         </h2>
         <h2 className="landing-h2 text-[#a6a6a6] text-[1.5rem] w-[48.75rem] mx-auto mb-4">
-          Estudiante de Maestría en Inteligencia Artificial, especialista en Python.
+          Estudiante de Maestría en Inteligencia Artificial, especialista en
+          Python.
         </h2>
         <div className="landing-button-container flex justify-center mt-4 gap-4">
           <button
-            className="landing-button w-[11.125rem] h-[3rem] rounded-[2.25rem] border border-white bg-white text-black font-medium text-[1rem]"
+            className="landing-button bg-white text-black hover:bg-custom-gray hover:bg-opacity-80 hover:text-white w-[11.125rem] h-[3rem] rounded-[2.25rem] border border-white font-medium text-[1rem]"
             id="first-button"
-            onClick={() => window.open('https://wa.me/573105620803', '_blank')}
+            onClick={() => window.open("https://wa.me/573105620803", "_blank")}
           >
             Contáctame
           </button>
@@ -47,9 +50,18 @@ const LandingContent = () => {
           <button
             className="landing-button w-[11.125rem] h-[3rem] rounded-[2.25rem] border border-white flex items-center justify-center gap-2 text-white bg-transparent"
             id="second-button"
-            onClick={() => window.open('https://www.linkedin.com/in/eduardortegon/', '_blank')}
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/eduardortegon/",
+                "_blank"
+              )
+            }
           >
-            <img src="../../src/assets/linkedin.png" alt="" className="w-4 h-4" />
+            <img
+              src="../../src/assets/linkedin.png"
+              alt=""
+              className="w-4 h-4"
+            />
             <p>LinkedIn</p>
           </button>
         </div>

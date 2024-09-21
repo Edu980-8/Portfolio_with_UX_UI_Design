@@ -49,7 +49,7 @@ const Experience = () => {
   const companies = Array.from(new Set(works.map((work) => work.company)));
 
   return (
-    <div className="mt-10 mb-10 flex justify-center h-[calc(100vh-5.5rem)]">
+    <div className="mt-10 mb-10 flex justify-center ">
       <div className="flex flex-col items-center w-[65.875rem]">
         <div className="flex text-left w-full gap-[1.5rem] mb-[3rem]">
           <h2 className="text-white text-[2.5rem]">Experiencia Laboral</h2>
@@ -63,7 +63,7 @@ const Experience = () => {
               <li
                 key={index}
                 onClick={() => setSelectedCompany(company)}
-                className={`cursor-pointer h-[3.813rem] flex items-center px-4 text-[1.5rem] ${
+                className={`cursor-pointer h-[3.813rem] flex items-center px-4 text-[1.5rem] hover:text-white ${
                   selectedCompany === company
                     ? "font-bold border-l-2 border-white"
                     : "text-custom-gray"

@@ -1,6 +1,5 @@
 import Projects from "./Projects.jsx";
-import preview_web_5ig from "../assets/5IG_page.jpeg";
-import preview_portfolio from "../assets/Portfolio_React.png";
+import preview_web_5ig from "../assets/5IG_page.png";
 import preview_Tesis from "../assets/Tesis.png"
 const projectsData = [
     {
@@ -11,21 +10,14 @@ const projectsData = [
       code_link: "https://github.com/Edu980-8/webpage_5ig",
       preview_link: "https://5igsolutions.com/",
     },
-    {
-      image: preview_portfolio,
-      project_name: "Portafolio Web", 
-      description: "Conoce un poco más acerca de mí, mis proyectos, habilidades, experiencia, estudios y contactame para trabajar juntos.",
-      techs: ["React", "CSS", "Tailwind", "Figma"],
-      code_link: "https://github.com/Edu980-8/Portfolio_with_UX_UI_Design",
-      preview_link: "#",
-    },
+
     {
       image: preview_Tesis,
       project_name: "Proyecto de Graduación Pregrado",
       description: "Conoce mas acerca de mis proyectos en el ámbito academico, con la implementacion y escritura de mi proyecto de graduación.",
       techs: ["SQL","LabView", "Matlab", "Excel"],
       code_link: "#",
-      preview_link: "#",
+      preview_link: "https://repository.usta.edu.co/bitstream/handle/11634/46475/2022eduardortegon.pdf?sequence=6&isAllowed=y",
     }
   ];
 const Projects_list = () => {
