@@ -1,7 +1,7 @@
 import Photo from "../assets/me.png";
 const About_me = () => {
   return (
-    <div className="mt-10 mb-10 flex justify-center ">
+    <div  id="about-me" className="mt-10 mb-10 flex justify-center pt-[5.8rem] ">
       <div className="flex flex-col items-center w-full max-w-[90%] md:max-w-[65.875rem]">
         <div className="flex flex-col md:flex-row text-left w-full gap-[1.5rem] mb-[3rem]">
           <h2 className="text-white text-[2.5rem]">Sobre Mi</h2>

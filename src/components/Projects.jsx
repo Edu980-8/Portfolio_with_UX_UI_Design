@@ -11,7 +11,7 @@ const Projects = ({
   index,
 }) => {
   return (
-    <div className="w-full flex gap-[3rem] items-center ">
+    <div  className="w-full flex gap-[3rem] items-center ">
       <img
         className="w-[27.125rem] h-[18rem] rounded-[0.25rem] object-scale-fill"
         src={image}

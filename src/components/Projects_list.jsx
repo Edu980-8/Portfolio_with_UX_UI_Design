@@ -22,9 +22,9 @@ const projectsData = [
   ];
 const Projects_list = () => {
   return (
-    <div className=" flex justify-center  ">
-      <div className="flex flex-col items-center w-[65.875rem] gap-[3rem]">
-        <div className="flex text-left w-full gap-[1.5rem] mb-[3rem]">
+    <div id="projects" className=" flex justify-center pt-[5.8rem] ">
+      <div className="flex flex-col items-center w-[65.875rem] gap-[5.375rem]">
+        <div className="flex text-left w-full gap-[1.5rem] ">
           <div className="self-center w-[100%] h-[0.125rem]  my-4 bg-custom-gray"></div>
           <h2 className="text-white text-[2.5rem] ">Proyectos</h2>
         </div>
