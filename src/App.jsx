@@ -3,6 +3,7 @@ import Landing_content from "../src/components/landing_content.jsx";
 import Experience from "../src/components/experience.jsx";
 import Projects_list from "../src/components/Projects_list.jsx";
 import Contribution_List from "../src/components/Contribution_List.jsx";
+import About_me from "./components/About_me.jsx";
 
 import "./index.css";
 
@@ -17,6 +18,7 @@ function App() {
       <Experience />
       <Projects_list />
       <Contribution_List />
+      <About_me />
       
     </>
   );
