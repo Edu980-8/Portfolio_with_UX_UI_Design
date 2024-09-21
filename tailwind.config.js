@@ -10,6 +10,7 @@ export default {
         'custom-gray-dark': '#1e1e1e',
         'custom-gray': '#5A5A5A', // Define el color aquí
         'custom-exp-gray': '#a6a6a6',
+        'custom-gray-about': '#4847474D',
       },
     },
   },
