@@ -1,15 +1,15 @@
 {
-  "name": "eduard-ortegon-portfolio",
+  "name": "Portfolio_with_UX_UI_Design",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://edu980-8.github.io/Portfolio_with_UX_UI_Design",
+  "homepage": "https://edu980-8.github.io/Portfolio_with_UX_UI_Design/",
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite",
     "build": "cross-env NODE_ENV=production vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "vite build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

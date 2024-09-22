@@ -1,5 +1,7 @@
 import { useTheme } from '../ThemeContext';
 import './ToggleButton.css';
+import Sun from "../assets/sun.png";
+import Moon from "../assets/moon.png";
 
 const ToggleButton = () => {
   const { isDarkMode, toggleTheme } = useTheme();
@@ -10,7 +12,7 @@ const ToggleButton = () => {
       onClick={toggleTheme}
     >
       <div className="toggle-knob"></div>
-      {!isDarkMode ? <img src="../../src/assets/sun.png" alt="Modo claro" /> : <img className="moon" src="../../src/assets/moon.png" alt="Modo oscuro" />}
+      {!isDarkMode ? <img src={Sun} alt="Modo claro" /> : <img className="moon" src={Moon} alt="Modo oscuro" />}
     </div>
   );
 };

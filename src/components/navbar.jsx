@@ -1,5 +1,7 @@
 import ToggleButton from "./ToggleButton.jsx";
 import { useTheme } from "../ThemeContext.jsx";
+import ColombiaFlag from "../assets/colombia.png"
+
 
 const Navbar = () => {
 
@@ -26,7 +28,7 @@ const Navbar = () => {
         </li>
         <div className="point h-1 w-1 rounded-full bg-[#5A5A5A]"></div>
         <li className="flag-container flex items-center gap-2">
-          <img className="flag w-[1.2rem] h-[1.2rem]" src="../../src/assets/colombia.png" alt="" />
+          <img className="flag w-[1.2rem] h-[1.2rem]" src= {ColombiaFlag} alt="" />
           <p>Español</p>
         </li>
         <div className="point h-1 w-1 rounded-full bg-[#5A5A5A]"></div>
