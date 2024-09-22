@@ -11,6 +11,8 @@ export default {
         'custom-gray': '#5A5A5A', // Define el color aquí
         'custom-exp-gray': '#a6a6a6',
         'custom-gray-about': '#4847474D',
+        'dark-letter': '#5a5a5a',
+        'color-card-light':'#e6e6e6'
       },
     },
   },

@@ -7,6 +7,7 @@ import About_me from "./components/About_me.jsx";
 import Banner from "./components/Banner.jsx";
 import Footer from "./components/Footer.jsx";
 import Contact from "./components/Contact.jsx";
+import { useTheme } from "./ThemeContext.jsx";
 
 import "./index.css";
 
@@ -14,8 +15,9 @@ import "./index.css";
 
 
 function App() {
+  const { isDarkMode } = useTheme();
   return (
-    <>
+    <div className={`App ${isDarkMode ?  'bg-white text-black' : 'bg-black text-white'}`}>
       <Navbar />
       <Landing_content />
       <Experience />
@@ -26,7 +28,7 @@ function App() {
       <Footer />
       <Contact />
       
-    </>
+    </div>
   );
 }
 

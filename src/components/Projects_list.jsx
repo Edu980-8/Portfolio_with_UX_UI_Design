@@ -26,7 +26,7 @@ const Projects_list = () => {
       <div className="flex flex-col items-center w-[65.875rem] gap-[5.375rem]">
         <div className="flex text-left w-full gap-[1.5rem] ">
           <div className="self-center w-[100%] h-[0.125rem]  my-4 bg-custom-gray"></div>
-          <h2 className="text-white text-[2.5rem] ">Proyectos</h2>
+          <h2 className=" text-[2.5rem] ">Proyectos</h2>
         </div>
         {projectsData.map((project, index) => (
           <Projects key={index} {...project} />

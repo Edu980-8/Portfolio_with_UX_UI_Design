@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react";
 import "./landing_content.css"; // Asegúrate de importar el CSS
 import Contact_Buttons from "./Contact_Buttons";
+import { useTheme } from "../ThemeContext";
 
 const LandingContent = () => {
   const [isAnimationActive, setIsAnimationActive] = useState(false);
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     setIsAnimationActive(true);
   }, []);
 
   return (
-    <div className="landing-content flex flex-col items-center justify-center h-[calc(100vh-5.5rem)] w-full text-center bg-black bg-cover bg-center">
-      <section className="landing-section w-full max-w-[90%] md:max-w-[65.875rem] min-h-[36.464rem] rounded-[1.5rem] flex flex-col items-center justify-center border-[0.125rem] border-custom-gray-dark bg-[radial-gradient(circle,transparent_20%,#0a0a0a_90%),radial-gradient(#1e1e1e_12%_13%,transparent_14%)] bg-[100%_100%,14px_14px]">
+    <div className="landing-content flex flex-col items-center justify-center h-[calc(100vh-5.5rem)] w-full text-center  bg-cover bg-center">
+      <section className="landing-section w-full max-w-[90%] md:max-w-[65.875rem] min-h-[36.464rem] rounded-[1.5rem] flex flex-col items-center justify-center border-[0.12rem] border-custom-gray-dark  bg-[100%_100%,14px_14px]">
         <div className="tag_container w-[11.5rem] h-[2.06rem] bg-[#1e1e1e] text-white border border-white rounded-[2.25rem] mb-4">
           <p className="m-0 p-[0.313rem]">Disponible para trabajar</p>
         </div>
@@ -20,14 +22,18 @@ const LandingContent = () => {
           Hola, soy Eduard Ortegón
         </h1>
 
-        <h2 className="landing-h2 text-[#a6a6a6] text-[1.2rem] md:text-[1.5rem] w-full md:w-[48.75rem] mx-auto mb-4 px-4 md:px-0">
+        <h2
+          className={` ${
+            !isDarkMode ? "text-custom-exp-gray" : "text-dark-letter"
+          } text-[1.2rem] md:text-[1.5rem] w-full md:w-[48.75rem] mx-auto mb-4 px-4 md:px-0`}
+        >
           <span>
             <span
               className={`${
                 isAnimationActive
-                  ? "span-animation landing-span-animation text-white"
+                  ? "span-animation landing-span-animation"
                   : ""
-              }`}
+              } ${!isDarkMode ? "text-white font-bold" : "text-black font-bold"}`}
             >
               Desarrollador de software,
             </span>{" "}
@@ -35,12 +41,12 @@ const LandingContent = () => {
           </span>
         </h2>
 
-        <h2 className="landing-h2 text-[#a6a6a6] text-[1.2rem] md:text-[1.5rem] w-full md:w-[48.75rem] mx-auto mb-4 px-4 md:px-0">
-          Estudiante de Maestría en Inteligencia Artificial, especialista en Python.
+        <h2 className={`${ !isDarkMode ?  "text-custom-exp-gray text-[1.2rem] md:text-[1.5rem] w-full md:w-[48.75rem] mx-auto mb-4 px-4 md:px-0":"text-dark-letter text-[1.2rem] md:text-[1.5rem] w-full md:w-[48.75rem] mx-auto mb-4 px-4 md:px-0"}`}>
+          Estudiante de Maestría en Inteligencia Artificial, especialista en
+          Python.
         </h2>
 
         <Contact_Buttons />
-        
       </section>
     </div>
   );

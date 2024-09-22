@@ -33,7 +33,7 @@ const Contribution_List = () => {
       <div className="flex justify-center flex-col items-center mt-10 ">
         <div className="w-[65.875rem] flex gap-[2rem] items-center justify-center">
           <div className="w-[40%] bg-custom-gray h-[0.125rem]"></div>
-          <h1 className="text-white text-[2.5rem]">Contribuciones</h1>
+          <h1 className=" text-[2.5rem]">Contribuciones</h1>
           <div className="w-[40%] bg-custom-gray h-[0.125rem]"></div>
         </div>
   

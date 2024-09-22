@@ -1,10 +1,12 @@
 import Photo from "../assets/me.png";
+import { useTheme } from "../ThemeContext";
 const About_me = () => {
+  const { isDarkMode } = useTheme();
   return (
-    <div  id="about-me" className="mt-10 mb-10 flex justify-center pt-[5.8rem] ">
+    <div id="about-me" className="mt-10 mb-10 flex justify-center pt-[5.8rem] ">
       <div className="flex flex-col items-center w-full max-w-[90%] md:max-w-[65.875rem]">
         <div className="flex flex-col md:flex-row text-left w-full gap-[1.5rem] mb-[3rem]">
-          <h2 className="text-white text-[2.5rem]">Sobre Mi</h2>
+          <h2 className="text-[2.5rem]">Sobre Mi</h2>
           <div className="self-center  w-[83%] h-[0.125rem] my-4 bg-custom-gray"></div>
         </div>
 
@@ -17,11 +19,15 @@ const About_me = () => {
             />
           </div>
           <div className="flex flex-col self-center w-[566px] h-[308px] gap-[1.5rem] ">
-            <h2 className="text-white text-[1.5rem] font-semibold">
+            <h2 className=" text-[1.5rem] font-semibold">
               Ingeniero Electrónico con conocimiento en datos e inteligencia
               artificial
             </h2>
-            <p className="text-custom-exp-gray text-[1rem] leading-relaxed">
+            <p
+              className={`text-[1rem] leading-relaxed ${
+                !isDarkMode ? "text-custom-exp-gray" : "text-custom-gray"
+              }`}
+            >
               Mi nombre es Eduard Ortegón, soy desarrollador de software e
               ingeniero electrónico colombiano, con experiencia en el desarrollo
               de páginas web y la construcción de algoritmos para resolver

@@ -1,8 +1,13 @@
 import ToggleButton from "./ToggleButton.jsx";
+import { useTheme } from "../ThemeContext.jsx";
 
 const Navbar = () => {
+
+
+  const { isDarkMode } = useTheme();
+  const cadena = !isDarkMode ? "bg-black" : "bg-white";
   return (
-    <nav className="navbar pt-5 sticky top-0 z-10 flex justify-center bg-black text-white h-[5.5rem] w-full gap-6">
+    <nav className={`navbar pt-5 ${cadena} sticky top-0 z-10 flex justify-center h-[5.5rem] w-full gap-6`}>
       <ul className="flex items-center justify-center h-[3.5rem] w-[39rem] rounded-[2.25rem] border border-[#5A5A5A] gap-4 mr-4 p-0">
         <li className="list-none m-0 p-0 transition ease-in-out duration-300 hover:text-[#6568E9] cursor-pointer">
           <a href="#" className="block">Inicio</a>

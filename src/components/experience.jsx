@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useTheme } from "../ThemeContext";
 
 const Experience = () => {
+  const { isDarkMode } = useTheme();
   const works = [
     {
       name: "Desarrollador de Software (contratista AT&T)",
@@ -49,53 +51,62 @@ const Experience = () => {
   const companies = Array.from(new Set(works.map((work) => work.company)));
 
   return (
-  <div id="experience" className=" mb-10 flex justify-center pt-[5.8rem]">
-    <div className="flex flex-col items-center w-full max-w-[90%] md:max-w-[65.875rem]">
-      <div className="flex flex-col md:flex-row text-left w-full gap-[1.5rem] mb-[3rem]">
-        <h2 className="text-white text-[2rem] md:text-[2.5rem]">Experiencia Laboral</h2>
-        <div className="self-center w-full md:w-[65%] h-[0.125rem] my-4 bg-custom-gray"></div>
-      </div>
+    <div id="experience" className=" mb-10 flex justify-center pt-[5.8rem]">
+      <div className="flex flex-col items-center w-full max-w-[90%] md:max-w-[65.875rem]">
+        <div className="flex flex-col md:flex-row text-left w-full gap-[1.5rem] mb-[3rem]">
+          <h2 className=" text-[2rem] md:text-[2.5rem]">Experiencia Laboral</h2>
+          <div className="self-center w-full md:w-[65%] h-[0.125rem] my-4 bg-custom-gray"></div>
+        </div>
 
-      <div className="flex flex-col md:flex-row h-auto w-full gap-4">
-        {/* Lista de compañías */}
-        <ul className="list-none w-full md:w-[20rem]">
-          {companies.map((company, index) => (
-            <li
-              key={index}
-              onClick={() => setSelectedCompany(company)}
-              className={`border-l-[2px] border-custom-gray cursor-pointer h-[3.813rem] flex items-center px-4 text-[1.25rem] md:text-[1.5rem] hover:text-white ${
-                selectedCompany === company
-                  ? "font-bold border-white border-l-[4px]"
-                  : "text-custom-gray"
-              }`}
-            >
-              {company}
-            </li>
-          ))}
-        </ul>
-
-        {/* Lista de trabajos filtrados */}
-        <div className="w-full md:w-[46.563rem]">
-          <ul className="list-none">
-            {filteredWorks.map((work, index) => (
-              <li key={index}>
-                <h3 className="font-semibold text-[1.25rem] md:text-[1.5rem] mb-4">{work.name}</h3>
-                <p className="mb-4">{work.general_description}</p>
-                <p className="text-custom-exp-gray text-[1rem] mb-4">{work.date}</p>
-                <ul className="text-custom-exp-gray text-[1rem] list-disc pl-5">
-                  {work.activities.map((activity, index) => (
-                    <li className="mb-4" key={index}>{activity}</li>
-                  ))}
-                </ul>
+        <div className="flex flex-col md:flex-row h-auto w-full gap-4">
+          {/* Lista de compañías */}
+          <ul className="list-none w-full md:w-[20rem]">
+            {companies.map((company, index) => (
+              <li
+                key={index}
+                onClick={() => setSelectedCompany(company)}
+                className={`cursor-pointer h-[3.813rem] flex items-center px-4 text-[1.25rem] md:text-[1.5rem] border-l-[2px] ${
+                  selectedCompany === company
+                    ? "font-bold border-l-[4px]"
+                    : `${isDarkMode ? "text-custom-gray" : "text-custom-gray"}`
+                } ${isDarkMode ? "border-black" : "border-white"}`}
+              >
+                {company}
               </li>
             ))}
           </ul>
+
+          {/* Lista de trabajos filtrados */}
+          <div className="w-full md:w-[46.563rem]">
+            <ul className="list-none">
+              {filteredWorks.map((work, index) => (
+                <li key={index}>
+                  <h3 className="font-semibold text-[1.25rem] md:text-[1.5rem] mb-4">
+                    {work.name}
+                  </h3>
+                  <p className="mb-4">{work.general_description}</p>
+                  <p className="text-custom-exp-gray text-[1rem] mb-4">
+                    {work.date}
+                  </p>
+                  <ul
+                    className={`pl-5 list-disc text-[1rem] ${
+                      isDarkMode ? "text-custom-gray" : "text-custom-exp-gray"
+                    }`}
+                  >
+                    {work.activities.map((activity, index) => (
+                      <li className="mb-4" key={index}>
+                        {activity}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
-
+  );
 };
 
 export default Experience;
