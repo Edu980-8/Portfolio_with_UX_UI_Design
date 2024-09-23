@@ -60,16 +60,20 @@ const Experience = () => {
 
         <div className="flex flex-col md:flex-row h-auto w-full gap-4">
           {/* Lista de compañías */}
-          <ul className="flex md:flex-col overflow-x-auto w-full md:w-[20rem] scrollbar-hide">
+          <ul className="flex md:flex-col overflow-x-auto w-full md:w-[20rem] scrollbar-hide mb-6">
             {companies.map((company, index) => (
               <li
                 key={index}
                 onClick={() => setSelectedCompany(company)}
-                className={`cursor-pointer h-[3.813rem] flex items-center px-4 text-[1.25rem] md:text-[1.5rem] mb-6 ${
+                className={`cursor-pointer h-[3.813rem] flex items-center px-4 text-[1.25rem] md:text-[1.5rem] md:border-l-[2px] sm:border-b-[2px] md:pb-2 scrollbar-hide ${
                   selectedCompany === company
-                    ? "font-bold md:border-l-[5px] md:border-l-[2px] border-b-0 sm:border-b-5 sm:border-l-0"
-                    : `${isDarkMode ? "text-custom-gray" : "text-custom-gray"}`
-                } ${isDarkMode ? "border-black" : "border-white"} md:border-b-0`}
+                    ? "font-bold md:border-l-[5px] border-b-4" // Borde inferior más ancho cuando está seleccionado
+                    : `${
+                        isDarkMode ? "text-custom-gray" : "text-custom-gray"
+                      } border-b-0` // Sin borde inferior si no está seleccionado
+                } ${
+                  isDarkMode ? "border-black" : "border-white"
+                } md:border-b-0`}
               >
                 {company}
               </li>
