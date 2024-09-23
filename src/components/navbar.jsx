@@ -14,15 +14,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar pt-5 ${cadena} sticky top-0 z-10 flex justify-between items-center h-[5.5rem] w-full px-4`}>
-      {/* Botón de hamburguesa para móviles */}
-      <div className="md:hidden">
-        <button onClick={toggleMenu}>
-          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </button>
-      </div>
-
-      {/* Menú en pantallas grandes */}
+    <nav className={`navbar pt-5 ${cadena} sticky top-0 z-10 flex justify-center h-[5.5rem] w-full gap-6`}>
+      {/* Menú para pantallas grandes */}
       <ul className="hidden md:flex items-center justify-center h-[3.5rem] w-[39rem] rounded-[2.25rem] border border-[#5A5A5A] gap-4 p-0">
         <li className="list-none transition ease-in-out duration-300 hover:text-[#6568E9] cursor-pointer">
           <a href="#">Inicio</a>
@@ -48,11 +41,18 @@ const Navbar = () => {
         <ToggleButton />
       </ul>
 
-      {/* Menú desplegable para móviles */}
+      {/* Botón de hamburguesa para pantallas pequeñas */}
+      <div className="md:hidden flex justify-between items-center w-full px-4">
+        <button onClick={toggleMenu}>
+          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+      </div>
+
+      {/* Menú desplegable para pantallas pequeñas */}
       {isOpen && (
         <ul
           className={`flex flex-col items-center justify-center absolute top-[5.5rem] left-0 w-full z-50 gap-4 p-4 md:hidden ${
-            !isDarkMode ? "bg-white text-black" : "bg-black text-white"
+            isDarkMode ? "bg-white text-black" : "bg-black text-white"
           }`}
         >
           <li className="list-none transition ease-in-out duration-300 hover:text-[#6568E9] cursor-pointer">
