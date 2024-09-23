@@ -4,7 +4,7 @@ import { useTheme } from "../ThemeContext";
 const Contribution_Card = ({ image, project_name, description, techs }) => {
   const { isDarkMode } = useTheme();
   return (
-    <div className="bg-[#4847474D] w-full max-w-[20.583rem] h-[28.188rem] mt-10 flex flex-col items-center border-[#272727] border-[0.1rem] rounded-[0.063rem] gap-[1rem] pt-4 px-4 sm: h-auto sm: pb-4 ">
+    <div className="rounded-[4px] bg-[#4847474D] w-full max-w-[20.583rem] h-[28.188rem] mt-5 flex flex-col items-center border-[#272727] border-[0.1rem] rounded-[0.063rem] gap-[1rem] pt-4 px-4 sm: h-auto sm: pb-4 ">
       <img
         className="w-full h-[10.688rem] rounded-[0.25rem] object-cover"
         src={image}

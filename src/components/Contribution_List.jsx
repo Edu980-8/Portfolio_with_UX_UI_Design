@@ -6,7 +6,7 @@ import preview_Spotify from "../assets/spotify_api.png";
 const contributionProjects = [
   {
     image: preview_Rick_Morty,
-    project_name: "Rick y Morty Api ",
+    project_name: "Rick y Morty Api",
     description:
       "Aplicacion fullstack, frontend implementado mediante diseño Figma proveido por UX/UI, backend permite a traves de middlewares la conexion con el server implementado en Express.",
     techs: ["React", "Redis", "Tailwind", "Express", "Graphql"],
@@ -38,11 +38,18 @@ const Contribution_List = () => {
         </div>
       </div>
 
-      {/* Ajustar el grid para pantallas pequeñas y medianas */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-1 w-full max-w-[65.875rem] gap-[2.25rem] mt-4 mb-10 justify-items-center sm:gap-[1.5rem] sm: mt-0 sm: gap-[3px] sm: mb-0">
-        {contributionProjects.map((project, index) => (
-          <Contribution_Card key={index} {...project} />
-        ))}
+      {/* Mensaje que indica que se puede deslizar hacia la derecha (solo en móvil) */}
+      <div className="block sm:hidden text-center mb-2">
+        <p className="text-lg text-custom-gray">Desliza hacia la derecha para ver más</p>
+      </div>
+
+      {/* Grid para pantallas pequeñas */}
+      <div className="overflow-x-auto w-full max-w-[65.875rem] mt-4 scrollbar-hide">
+        <div className="grid grid-flow-col auto-cols-[minmax(300px,_1fr)] gap-4">
+          {contributionProjects.map((project, index) => (
+            <Contribution_Card key={index} {...project} />
+          ))}
+        </div>
       </div>
     </div>
   );
