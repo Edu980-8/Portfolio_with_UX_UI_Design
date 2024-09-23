@@ -4,7 +4,7 @@ import { useTheme } from "../ThemeContext";
 const About_me = () => {
   const { isDarkMode } = useTheme();
   return (
-    <div id="about-me" className="mt-10 mb-10 flex justify-center pt-[5.8rem] sm:mt-0 md:mt-0">
+    <div id="about-me" className="mt-10 mb-10 flex justify-center pt-[5.8rem] sm: mt-0 md:mt-0">
       <div className="flex flex-col items-center w-full max-w-[90%] md:max-w-[65.875rem]">
         {/* Título y línea divisoria */}
         <div className="flex flex-col md:flex-row text-left w-full gap-[1.5rem] mb-[3rem]">

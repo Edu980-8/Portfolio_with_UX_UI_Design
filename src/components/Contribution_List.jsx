@@ -29,15 +29,17 @@ const contributionProjects = [
 
 const Contribution_List = () => {
   return (
-    <div className="flex justify-center flex-col items-center mt-10">
-      <div className="w-full flex gap-[2rem] items-center justify-center max-w-[65.875rem]">
-        <div className="w-[40%] bg-custom-gray h-[0.125rem]"></div>
-        <h1 className="text-[2.5rem]">Contribuciones</h1>
-        <div className="w-[40%] bg-custom-gray h-[0.125rem]"></div>
+    <div className="flex justify-center flex-col items-center mt-10 px-4 sm:px-0">
+      <div className="w-full flex flex-col items-center">
+        <div className="flex items-center justify-center w-full max-w-[65.875rem] gap-4">
+          <div className="bg-custom-gray h-[0.125rem] flex-1"></div>
+          <h1 className="text-[2.5rem] mx-4">Contribuciones</h1>
+          <div className="bg-custom-gray h-[0.125rem] flex-1"></div>
+        </div>
       </div>
 
       {/* Ajustar el grid para pantallas pequeñas y medianas */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-1 w-full max-w-[65.875rem] gap-[2.25rem] mt-4 mb-10 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-1 w-full max-w-[65.875rem] gap-[2.25rem] mt-4 mb-10 justify-items-center sm:gap-[1.5rem] sm: mt-0 sm: gap-[3px] sm: mb-0">
         {contributionProjects.map((project, index) => (
           <Contribution_Card key={index} {...project} />
         ))}

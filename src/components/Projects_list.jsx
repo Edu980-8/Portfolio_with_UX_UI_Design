@@ -22,11 +22,11 @@ const projectsData = [
   ];
 const Projects_list = () => {
   return (
-    <div id="projects" className=" flex justify-center pt-[5.8rem] ">
+    <div id="projects" className=" flex justify-center pt-[5.8rem]  sm: px-4">
       <div className="flex flex-col items-center w-[65.875rem] gap-[5.375rem]">
-        <div className="flex text-left w-full gap-[1.5rem] ">
-          <div className="self-center w-[100%] h-[0.125rem]  my-4 bg-custom-gray"></div>
-          <h2 className=" text-[2.5rem] ">Proyectos</h2>
+        <div className="flex text-left w-full gap-[1.5rem] sm: gap-[1rem]  ">
+          <div className="self-center w-[100%] h-[0.125rem]  my-4 bg-custom-gray "></div>
+          <h2 className=" text-[2.5rem]  ">Proyectos</h2>
         </div>
         {projectsData.map((project, index) => (
           <Projects key={index} {...project} />
