@@ -51,11 +51,11 @@ const Experience = () => {
   const companies = Array.from(new Set(works.map((work) => work.company)));
 
   return (
-    <div id="experience" className=" mb-10 flex justify-center pt-[5.8rem]">
+    <div id="experience" className="mb-10 flex justify-center pt-[5.8rem]">
       <div className="flex flex-col items-center w-full max-w-[90%] md:max-w-[65.875rem]">
         <div className="flex flex-col md:flex-row text-left w-full gap-[1.5rem] mb-[3rem]">
-          <h2 className=" text-[2rem] md:text-[2.5rem]">Experiencia Laboral</h2>
-          <div className="self-center w-full md:w-[65%] h-[0.125rem] my-4 bg-custom-gray"></div>
+          <h2 className="text-[2rem] md:text-[2.5rem]">Experiencia Laboral</h2>
+          <div className="self-center w-[60%] h-[0.125rem] my-4 bg-custom-gray md:block hidden"></div>
         </div>
 
         <div className="flex flex-col md:flex-row h-auto w-full gap-4">

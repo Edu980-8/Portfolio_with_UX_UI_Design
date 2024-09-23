@@ -9,11 +9,11 @@ const Projects = ({
   techs,
   code_link,
   preview_link,
-  index,
 }) => {
   const { isDarkMode } = useTheme();
+  
   return (
-    <div className="w-full flex flex-col md:flex-row gap-[3rem] items-center ">
+    <div className="w-full flex flex-col md:flex-row gap-[3rem] items-center px-4 sm:px-6"> {/* Añadido padding horizontal en móviles */}
       <img
         className="w-[27.125rem] h-[18rem] rounded-[0.25rem] object-scale-fill"
         src={image}
@@ -23,9 +23,9 @@ const Projects = ({
         <p className="text-[1.5rem] font-semibold">{project_name}</p>
 
         {/* Ajustar el div de las tecnologías */}
-        <div className="flex flex-wrap gap-[0.5rem] md:order-none order-2">
+        <div className="flex flex-wrap gap-[0.5rem] md:order-none">
           {techs.map((tech, index) => (
-            <Techs key={index} techName={tech}></Techs>
+            <Techs key={index} techName={tech} />
           ))}
         </div>
 
@@ -43,7 +43,7 @@ const Projects = ({
 
           <button
             className={`w-[119px] h-[40px] border p-[1.5rem] px-[0.5rem] rounded-[2.25rem] flex items-center justify-center hover:bg-custom-gray hover:bg-opacity-80 hover:text-white ${
-              !isDarkMode ? " border border-white" : "border border-black"
+              !isDarkMode ? "border-white" : "border-black"
             }`}
             onClick={() => window.open(preview_link, "_blank")}
           >

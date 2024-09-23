@@ -12,8 +12,8 @@ const LandingContent = () => {
   }, []);
 
   return (
-    <div className="landing-content flex flex-col items-center justify-center h-[calc(100vh-5.5rem)] w-full text-center  bg-cover bg-center">
-      <section className="landing-section w-full max-w-[90%] md:max-w-[65.875rem] min-h-[36.464rem] rounded-[1.5rem] flex flex-col items-center justify-center border-[0.12rem] border-custom-gray-dark  bg-[100%_100%,14px_14px]">
+    <div className="landing-content flex flex-col items-center justify-center h-[calc(100vh-5.5rem)] w-full text-center  bg-cover bg-center ">
+      <section className="landing-section w-full max-w-[90%] md:max-w-[65.875rem] min-h-[36.464rem] rounded-[1.5rem] flex flex-col items-center justify-center border-[0.12rem] border-custom-gray-dark  bg-[100%_100%,14px_14px] sm: pt-10 sm: pb-10">
         <div className="tag_container w-[11.5rem] h-[2.06rem] bg-[#1e1e1e] text-white border border-white rounded-[2.25rem] mb-4">
           <p className="m-0 p-[0.313rem]">Disponible para trabajar</p>
         </div>

@@ -25,8 +25,9 @@ function App() {
       <Contribution_List />
       <About_me />
       <Banner />
-      <Footer />
       <Contact />
+      <Footer />
+      
       
     </div>
   );

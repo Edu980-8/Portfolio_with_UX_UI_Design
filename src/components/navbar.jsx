@@ -42,7 +42,7 @@ const Navbar = () => {
       </ul>
 
       {/* Botón de hamburguesa para pantallas pequeñas */}
-      <div className="md:hidden flex justify-between items-center w-full px-4">
+      <div className="md:hidden flex justify-between items-center w-full px-4  ">
         <button onClick={toggleMenu}>
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
