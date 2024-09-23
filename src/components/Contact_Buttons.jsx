@@ -4,7 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 const Contact_Buttons = () => {
   const { isDarkMode } = useTheme();
   return (
-    <div className="landing-button-container flex flex-col md:flex-row justify-center mt-4 gap-4">
+    <div className="landing-button-container flex flex-col md:flex-row justify-center items-center w-full mt-4 gap-4">
       <button
         className={`${
           !isDarkMode
@@ -18,7 +18,7 @@ const Contact_Buttons = () => {
       </button>
 
       <button
-        className={` w-[11.125rem] h-[3rem] rounded-[2.25rem] flex items-center justify-center gap-2 ${
+        className={`w-[11.125rem] h-[3rem] rounded-[2.25rem] flex items-center justify-center gap-2 ${
           !isDarkMode
             ? "bg-black text-white border border-white hover:bg-custom-gray hover:bg-opacity-80 hover:text-white"
             : "bg-white text-black border border-black hover:bg-custom-gray hover:bg-opacity-80 hover:text-white"

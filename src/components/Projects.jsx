@@ -13,19 +13,22 @@ const Projects = ({
 }) => {
   const { isDarkMode } = useTheme();
   return (
-    <div className="w-full flex gap-[3rem] items-center ">
+    <div className="w-full flex flex-col md:flex-row gap-[3rem] items-center ">
       <img
         className="w-[27.125rem] h-[18rem] rounded-[0.25rem] object-scale-fill"
         src={image}
         alt="Project image"
       />
-      <div className="w-[calc(100%-27.125rem)] flex flex-col  justify-left gap-[1.5rem]">
-        <p className="text-[1.5rem]  text-semibold">{project_name}</p>
-        <div className="flex flex-row gap-[0.5rem] ">
+      <div className="w-full md:w-[calc(100%-27.125rem)] flex flex-col gap-[1.5rem]">
+        <p className="text-[1.5rem] font-semibold">{project_name}</p>
+
+        {/* Ajustar el div de las tecnologías */}
+        <div className="flex flex-wrap gap-[0.5rem] md:order-none order-2">
           {techs.map((tech, index) => (
             <Techs key={index} techName={tech}></Techs>
           ))}
         </div>
+
         <p className="text-[1.125rem] text-custom-exp-gray">{description}</p>
 
         <div className="flex flex-row gap-[1rem]">

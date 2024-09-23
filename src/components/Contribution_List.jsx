@@ -6,10 +6,10 @@ import preview_Spotify from "../assets/spotify_api.png";
 const contributionProjects = [
   {
     image: preview_Rick_Morty,
-    project_name: "Rick y Morty Api ", 
+    project_name: "Rick y Morty Api ",
     description:
-      "Aplicacion fullstack, frontend implementado mediante diseño Figma proveido por UX/UI, backend permite a traves de middlewares la conexion con el server implementado en Express. ",
-    techs: ["React", "Redis","Tailwind","Express", "Graphql"],
+      "Aplicacion fullstack, frontend implementado mediante diseño Figma proveido por UX/UI, backend permite a traves de middlewares la conexion con el server implementado en Express.",
+    techs: ["React", "Redis", "Tailwind", "Express", "Graphql"],
   },
   {
     image: preview_PSO_McLaren,
@@ -25,26 +25,25 @@ const contributionProjects = [
       "Integración con la API de Spotify usando OAuth 2.0. El backend obtiene mercados, géneros y la playlist Top 50 de una región. Los datos se procesan con pandas y se generan archivos CSV según los géneros musicales encontrados.",
     techs: ["Python", "Excel"],
   },
-  
 ];
 
 const Contribution_List = () => {
-    return (
-      <div className="flex justify-center flex-col items-center mt-10 ">
-        <div className="w-[65.875rem] flex gap-[2rem] items-center justify-center">
-          <div className="w-[40%] bg-custom-gray h-[0.125rem]"></div>
-          <h1 className=" text-[2.5rem]">Contribuciones</h1>
-          <div className="w-[40%] bg-custom-gray h-[0.125rem]"></div>
-        </div>
-  
-        <div className="grid grid-cols-3 w-[65.875rem] gap-[2.25rem] mt-4 mb-10">
-          {contributionProjects.map((project, index) => (
-            <Contribution_Card key={index} {...project} />
-          ))}
-        </div>
+  return (
+    <div className="flex justify-center flex-col items-center mt-10">
+      <div className="w-full flex gap-[2rem] items-center justify-center max-w-[65.875rem]">
+        <div className="w-[40%] bg-custom-gray h-[0.125rem]"></div>
+        <h1 className="text-[2.5rem]">Contribuciones</h1>
+        <div className="w-[40%] bg-custom-gray h-[0.125rem]"></div>
       </div>
-    );
-  };
-  
-  export default Contribution_List;
-  
+
+      {/* Ajustar el grid para pantallas pequeñas y medianas */}
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-1 w-full max-w-[65.875rem] gap-[2.25rem] mt-4 mb-10 justify-items-center">
+        {contributionProjects.map((project, index) => (
+          <Contribution_Card key={index} {...project} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Contribution_List;
