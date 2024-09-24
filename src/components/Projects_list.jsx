@@ -30,7 +30,7 @@ const Projects_list = () => {
           <h2 className="text-[2.5rem] lg:px-4 pl-[25%]">Proyectos</h2>
         </div>
         {projectsData.map((project, index) => (
-          <Projects key={index} {...project} />
+          <Projects index={index} key={index} {...project} />
         ))}
       </div>
     </div>
