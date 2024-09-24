@@ -15,12 +15,14 @@ import {
   SiLabview,
   SiExpress,
   SiGraphql, 
-  SiSequelize 
+  SiSequelize,
+  SiMicrosoftazure  
 } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaFigma, FaFileExcel } from "react-icons/fa";
 import MatlabIcon from "../../src/assets/matlab.png";
 import { DiRedis } from "react-icons/di";
+import { TbBrandOauth } from "react-icons/tb";
 
 const Technology = [
   { name: "React", img: <FaReact /> },
@@ -43,6 +45,8 @@ const Technology = [
   { name: "Graphql", img: <SiGraphql /> },
   { name: "Redis", img: <DiRedis /> },
   { name: "Sequelize", img: <SiSequelize /> },
+  { name: "Azure", img: <SiMicrosoftazure /> },
+  { name: "OAuth 2.0", img: <TbBrandOauth /> },
   {
     name: "Matlab",
     img: <img src={MatlabIcon} alt="Matlab" className="w-6 h-6" />,
@@ -71,6 +75,8 @@ const techColors = {
   Graphql: "bg-[#ee0097] bg-opacity-80",
   Redis: "bg-[#d82f27] bg-opacity-80",
   Sequelize: "bg-[#03aff0] bg-opacity-80",
+  Azure: "bg-[#0078d7] bg-opacity-80",
+  "OAuth 2.0": "bg-[#0078d7] bg-opacity-80",
 };
 const getTechIndex = (name) => {
   const techIndex = Technology.findIndex((tech) => tech.name === name);

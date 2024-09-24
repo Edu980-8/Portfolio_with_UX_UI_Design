@@ -23,7 +23,7 @@ const contributionProjects = [
     project_name: "Spotify API",
     description:
       "Integración con la API de Spotify usando OAuth 2.0. El backend obtiene mercados, géneros y la playlist Top 50 de una región. Los datos se procesan con pandas y se generan archivos CSV según los géneros musicales encontrados.",
-    techs: ["Python", "Excel"],
+    techs: ["Python", "Excel", "OAuth 2.0"],
   },
 ];
 

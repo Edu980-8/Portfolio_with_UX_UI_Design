@@ -12,8 +12,8 @@ const Experience = () => {
       activities: [
         "Creé soluciones automatizadas utilizando Power Automate, tanto en su versión en la nube como en escritorio. Mi contribución se orientó en la mejora y el mantenimiento de bots, así como la implementacion de flujos en la nube.",
         "Desarrollé automatizaciones RPA basadas en Power Automate Cloud y Desktop, junto con model driven apps, quick view forms, SharePoints y Power Apps, integrando eficientemente las necesidades del producto con el negocio tecnológico.",
-        "Utilizando tecnologías como React, JavaScript, HTML y CSS, contribuí en la creacion de la pagina web de la marca. El versionamiento de la misma fue hecho mediante Git y Github y su despliegue fue realizado en la nube de Azure. Para hacer mas eficientes los esfuerzos de implementacion se trabajo bajo metodologia Scrum.",
-        "Resolví tickets de usuarios en tiempo real, brindando soporte técnico inmediato mediante habilidades comunicativas y técnicas.",
+        "Utilizando tecnologías como React, JavaScript, HTML y CSS, ademas de Azure para el despliegue, contribuí en la creacion de la pagina web de la marca. Para hacer mas eficientes los esfuerzos de implementacion se trabajo bajo metodologia Scrum.",
+        "Resolví tickets de usuarios en tiempo real enfocados en problemas de Power Platform y Power Automate para AT&T, brindando soporte técnico inmediato a través de mis habilidades de comunicación y conocimientos técnicos."
       ],
       company: "5IG Solutions",
     },

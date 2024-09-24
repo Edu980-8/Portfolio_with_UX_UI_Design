@@ -7,7 +7,7 @@ const projectsData = [
     image: preview_web_5ig,
     project_name: "Página Web 5IG Solutions",
     description: "Conoce a 5IG Solutions la mejor opción en la creación de servicios tecnológicos de primera calidad. Utilizando herramientas de Low code - No Code, para el desarrollo de sus servicios.",
-    techs: ["React", "CSS", "Tailwind"],
+    techs: ["React", "CSS", "Tailwind","Azure"],
     code_link: "https://github.com/Edu980-8/webpage_5ig",
     preview_link: "https://5igsolutions.com/",
   },
